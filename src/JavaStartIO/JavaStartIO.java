@@ -4,6 +4,7 @@ package JavaStartIO;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class JavaStartIO {
@@ -20,6 +21,10 @@ public class JavaStartIO {
         System.out.println("Czy istnieje: " + exists);
         String absolutePath = plik.getAbsolutePath();
         System.out.println("Ten plik istnieje w " + absolutePath);
+
+        PrintWriter zapis = new PrintWriter("jarek.txt");
+        zapis.println("nowy zapis do pliku");
+        zapis.close();
 
     }
 }
